@@ -1,0 +1,13 @@
+public (default, active)
+  interfaces: enp0s3
+  sources: 192.168.1.62/24
+  services: dhcpv6-client
+  ports: 
+  masquerade: no
+  forward-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="192.168.1.72" destination address="192.168.1.62" port port="14730" protocol="tcp" accept
+	rule family="ipv4" source address="192.168.1.65" destination address="192.168.1.62" port port="39901" protocol="tcp" accept
+	rule family="ipv4" source address="192.168.1.65" destination address="192.168.1.62" port port="14730" protocol="tcp" accept
+	rule family="ipv4" source address="192.168.1.53" destination address="192.168.1.62" port port="14730" protocol="tcp" accept
